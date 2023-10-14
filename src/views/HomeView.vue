@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
   </main>
 </template>
+<!-- fetch('https://dummyjson.com/products')
+.then(res => res.json())
+.then(console.log);
+             -->
