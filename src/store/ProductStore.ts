@@ -21,6 +21,7 @@ export const useProductStore = defineStore('product', {
     discount_products: [] as product_type[]
   }),
 
+  //The URL below should ideally be stored in an env file.
   actions: {
     async set_products() {
       axios.get('https://dummyjson.com/products').then((res) => {
@@ -28,12 +29,13 @@ export const useProductStore = defineStore('product', {
       })
       console.log(this.$state.all_products)
     },
+
     async set_discount_products() {
       axios.get('https://dummyjson.com/products').then((res) => {
         const sortedProducts = res.data.products.sort(
-          (a:product_type, b:product_type) => b.discountPercentage - a.discountPercentage
+          (a: product_type, b: product_type) => b.discountPercentage - a.discountPercentage
         )
-        this.$state.discount_products = sortedProducts.slice(0,8)
+        this.$state.discount_products = sortedProducts.slice(0, 8)
       })
     }
   }
