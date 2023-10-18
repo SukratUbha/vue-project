@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
-type product_type = {
+export type product_type = {
   id: number
   title: string
   brand: string
@@ -37,6 +37,11 @@ export const useProductStore = defineStore('product', {
         )
         this.$state.discount_products = sortedProducts.slice(0, 8)
       })
+    }
+  },
+  getters:{
+    getDiscountItems: (state) =>{
+      return state.discount_products
     }
   }
 })
