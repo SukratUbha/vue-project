@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="w-full max-w-sm bg-white border shadow-2xl border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-      <img class="p-8 rounded-t-lg" :src="product_card_item.thumbnail" alt="product image" />
+      <img class="p-8 rounded-t-lg max-h-96" :src="product_card_item.thumbnail" alt="product image" />
     </a>
     <div class="px-5 pb-5">
       <a href="#">
@@ -53,7 +53,8 @@ import type { product_type } from '../store/ProductStore'
 const props = defineProps<{
   product_card_item: product_type
 }>();
-
-// console.log(product_list_items);
 </script>
-<style></style>
+
+<style>
+
+</style>

@@ -8,6 +8,8 @@ const { getDiscountItems } = storeToRefs(ProductStore)
 
 <template>
   <main>
-    <ProductCarousel :product_list="getDiscountItems" />
+    <div class="container w-2/3">
+      <ProductCarousel :product_list="getDiscountItems" />
+    </div>
   </main>
 </template>

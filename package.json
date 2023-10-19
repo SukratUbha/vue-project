@@ -16,6 +16,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.5.1",
     "pinia": "^2.1.6",
+    "swiper": "^10.3.1",
     "vue": "^3.3.4",
     "vue-eslint-parser": "^9.3.2",
     "vue-router": "^4.2.4"
