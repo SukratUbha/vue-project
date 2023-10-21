@@ -42,6 +42,9 @@ export const useProductStore = defineStore('product', {
   getters:{
     getDiscountItems: (state) =>{
       return state.discount_products
+    },
+    getAllItems: (state) =>{
+      return state.all_products
     }
   }
 })
