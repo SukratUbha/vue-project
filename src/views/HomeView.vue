@@ -19,3 +19,12 @@ const { getDiscountItems, getAllItems } = storeToRefs(ProductStore)
     </div>
   </main>
 </template>
+
+
+<style>
+.div-card{
+  display: flex;
+  flex-wrap:wrap;
+  
+}
+</style>

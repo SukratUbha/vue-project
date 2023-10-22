@@ -21,7 +21,7 @@ export const useProductStore = defineStore('product', {
     discount_products: [] as product_type[]
   }),
 
-  //The URL below should ideally be stored in an env file.
+  //The URL below should ideally be stored in an env file, but keeping .env file in .gitignore.
   actions: {
     async set_products() {
       axios.get('https://dummyjson.com/products').then((res) => {

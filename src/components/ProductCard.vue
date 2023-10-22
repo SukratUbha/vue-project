@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+  <div class="shadow-2xl w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
       <img class="p-8 object-scale-down h-52 w-96 rounded-t-lg" :src="product_card_item.thumbnail" alt="product image" />
     </a>
@@ -48,7 +48,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import type { product_type } from '../store/ProductStore'
 
 const props = defineProps<{
