@@ -19,14 +19,16 @@ ProductStore.set_discount_products();
       </div>
     </div>
   </header>
-  <div class="container">
+  <div class="w-full">
     <RouterView />
   </div>
 </template>
 
 <style>
-#app{
+html,#app{
   display: flow-root;
+  margin:0;
+  width:100%;
 }
 body{
   place-items: flex-start;

@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-2xl w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+  <div class="card-div-primary shadow-2xl w-full max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
       <img class="p-8 object-scale-down h-52 w-96 rounded-t-lg" :src="product_card_item.thumbnail" alt="product image" />
     </a>
@@ -55,4 +55,9 @@ const props = defineProps<{
 }>();
 </script>
 
-<style></style>
+<style>
+.card-div-primary {
+  max-height: 400px !important;
+  min-height: 400px !important;
+}
+</style>
