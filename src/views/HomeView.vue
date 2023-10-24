@@ -13,7 +13,7 @@ const { getDiscountItems, getAllItems } = storeToRefs(ProductStore)
       <ProductCarousel :product_list="getDiscountItems" />
     </div>
     <div class="div-card">
-      <div v-for="(product, index) in getAllItems" :key="index">
+      <div class="card" v-for="(product, index) in getAllItems" :key="index">
         <ProductCard :product_card_item="product" />
       </div>
     </div>
@@ -24,7 +24,14 @@ const { getDiscountItems, getAllItems } = storeToRefs(ProductStore)
 <style>
 .div-card{
   display: flex;
+  flex: 0 1 24%;
   flex-wrap:wrap;
-  
+  justify-content: center;
+}
+.div-card > .card{
+  margin: 10px;
+}
+.div-carousel{
+  margin: 0px 25px 0px 25px;
 }
 </style>

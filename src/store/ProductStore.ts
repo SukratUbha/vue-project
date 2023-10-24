@@ -35,7 +35,7 @@ export const useProductStore = defineStore('product', {
         const sortedProducts = res.data.products.sort(
           (a: product_type, b: product_type) => b.discountPercentage - a.discountPercentage
         )
-        this.$state.discount_products = sortedProducts.slice(0, 8)
+        this.$state.discount_products = sortedProducts.slice(0, 15)
       })
     }
   },

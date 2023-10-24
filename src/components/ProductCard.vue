@@ -5,7 +5,7 @@
     </a>
     <div class="px-5 pb-5">
       <a href="#">
-        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ product_card_item.title }}</h5>
+        <h5 class="text-xl truncate font-semibold tracking-tight text-gray-900 dark:text-white">{{ product_card_item.title }}</h5>
       </a>
 
       <div class="flex items-center mt-2.5 mb-5">
@@ -40,7 +40,7 @@
       <div class="flex items-center justify-between">
         <span class="text-3xl font-bold text-gray-900 dark:text-white">{{'$' + product_card_item.price }}</span>
         <a href="#"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" @click="addToCart(product_card_item.id)">Add
           to cart</a>
       </div>
     </div>
@@ -48,16 +48,24 @@
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
 import type { product_type } from '../store/ProductStore'
+import { useCartStore } from '../store/cartStore';
+const CartStore = useCartStore();
 
 const props = defineProps<{
   product_card_item: product_type
 }>();
+
+const addToCart = (id:number) => {
+  const g = storeToRefs(CartStore)
+  g.add_to_cart(id)
+}
 </script>
 
 <style>
 .card-div-primary {
-  max-height: 400px !important;
-  min-height: 400px !important;
+  max-height: 350px;
+  min-height: 350px;
 }
 </style>
