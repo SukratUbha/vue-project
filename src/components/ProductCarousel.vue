@@ -21,7 +21,7 @@ import 'swiper/element/css/autoplay'
 import ProductCard from './ProductCard.vue';
 import type { product_type } from '../store/ProductStore';
 
-const props = defineProps<{
+defineProps<{
   product_list: product_type[]
 }>();
 </script>

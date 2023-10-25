@@ -27,7 +27,6 @@ export const useProductStore = defineStore('product', {
       axios.get('https://dummyjson.com/products').then((res) => {
         this.$state.all_products = res.data.products
       })
-      console.log(this.$state.all_products)
     },
 
     async set_discount_products() {

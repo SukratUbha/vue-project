@@ -1,10 +1,8 @@
 <script setup lang="js">
 import { RouterLink, RouterView } from 'vue-router'
 import { useProductStore } from './store/ProductStore';
-import { useCartStore } from './store/cartStore';
 import CartItems from './components/CartItems.vue';
 const ProductStore = useProductStore();
-const CartStore = useCartStore();
 ProductStore.set_products();
 ProductStore.set_discount_products();
 </script>
@@ -16,8 +14,8 @@ ProductStore.set_discount_products();
       <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
       </nav> -->
+      <CartItems />
       <div class="header">
-        <CartItems />
       </div>
     </div>
   </header>

@@ -48,18 +48,16 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia';
 import type { product_type } from '../store/ProductStore'
-import { useCartStore } from '../store/cartStore';
+import { useCartStore } from '../store/CartStore';
 const CartStore = useCartStore();
 
-const props = defineProps<{
+defineProps<{
   product_card_item: product_type
 }>();
 
 const addToCart = (id:number) => {
-  const g = storeToRefs(CartStore)
-  g.add_to_cart(id)
+  CartStore.add_to_cart(id)
 }
 </script>
 
